@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {connect} from "react-redux";
-import {createPost} from "../../actions/postActions";
-
+import {connect} from 'react-redux';
+import {createPost} from '../../actions/postActions';
+import '../../scss/src/components/form.scss';
 
 class Form extends Component {
 
@@ -22,6 +22,7 @@ class Form extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
+    console.log(e);
 
     const post = {
       title: this.state.title,
@@ -29,6 +30,11 @@ class Form extends Component {
     };
 
     this.props.createPost(post);
+
+    this.setState({
+      title: '',
+      body: ''
+    })
   };
 
   render() {
