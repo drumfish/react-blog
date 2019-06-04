@@ -1,0 +1,21 @@
+.form {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  .form-row {
+    margin-bottom: 10px;
+
+    .form-input {
+      border: 1px solid rgba(35, 35, 35, 0.99);
+      display: block;
+    }
+  }
+
+  .btn {
+    background-color: #558b55;
+    color: #ffffff;
+    padding: 5px 20px;
+    font-weight: bold;
+  }
+}
