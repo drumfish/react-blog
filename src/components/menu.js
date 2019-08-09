@@ -11,6 +11,7 @@ class Menu extends Component {
           <div className="logo"><img src={logo} alt="logo"/></div>
           <div>
             <NavLink className={'menu_link'} activeClassName={'active'} to="/" exact>Blog</NavLink>
+            <NavLink className={'menu_link'} activeClassName={'active'} to="/todos">Todos</NavLink>
             <NavLink className={'menu_link'} activeClassName={'active'} to="/about">About</NavLink>
           </div>
         </div>

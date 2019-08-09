@@ -15,8 +15,12 @@ class Form extends Component {
   }
 
   onChange = (e) => {
+    const target = e.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+
     this.setState({
-      [e.target.name]: e.target.value
+      [name]: value
     });
   };
 

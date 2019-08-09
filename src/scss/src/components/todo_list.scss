@@ -1,0 +1,35 @@
+.todo_list_item {
+  display: flex;
+  align-items: center;
+
+  .todo_checkbox {
+    border: 1px solid #464646;
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    margin-right: 5px;
+
+    &:checked {
+      border-color: #009688;
+
+      &:after {
+        content: '';
+        width: 9px;
+        height: 5px;
+        position: absolute;
+        top: 3px;
+        left: 2px;
+        border: 2px solid #009688;
+        border-top: none;
+        border-right: none;
+        background: transparent;
+        transform: rotate(-45deg);
+      }
+
+      & ~ .todo_label {
+        text-decoration: line-through;
+      }
+    }
+  }
+}
